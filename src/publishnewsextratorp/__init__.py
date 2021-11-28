@@ -1,4 +1,4 @@
-__version__ = '0.0.0'
+__version__ = '0.0.1'
 
 from publishnewsextratorp.file1 import IniciarDriver, ExcecaoAnoInvalido, ExtracaoPublishNews
 from selenium import webdriver
