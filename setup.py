@@ -23,7 +23,7 @@ def read(*names, **kwargs):
 
 setup(
     name='publishnewsextratorp',
-    version='0.0.4',
+    version='0.0.6',
     license='BSD-2-Clause',
     description='An example package. Generated with cookiecutter-pylibrary.',
     long_description='%s\n%s' % (
