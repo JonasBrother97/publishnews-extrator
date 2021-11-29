@@ -177,4 +177,6 @@ class ExtracaoPublishNews(IniciarDriver):
         '''
         self.driver.close()
 
+
+
         

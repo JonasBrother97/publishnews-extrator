@@ -51,9 +51,9 @@ Overview
     :alt: Supported implementations
     :target: https://pypi.org/project/publishnewsextratorp
 
-.. |commits-since| image:: https://img.shields.io/github/commits-since/JonasBrother97/python-publishnewsextratorp/v0.0.3.svg
+.. |commits-since| image:: https://img.shields.io/github/commits-since/JonasBrother97/python-publishnewsextratorp/v0.0.4.svg
     :alt: Commits since latest release
-    :target: https://github.com/JonasBrother97/python-publishnewsextratorp/compare/v0.0.3...master
+    :target: https://github.com/JonasBrother97/python-publishnewsextratorp/compare/v0.0.4...master
 
 
 
