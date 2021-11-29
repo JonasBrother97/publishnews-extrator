@@ -18,6 +18,10 @@ class IniciarDriver:
     
     #classe construtor
     def __init__(self):
+        '''
+        Esta é uma classe construtora. Inicializa o Chrome
+        A classe ExtracaoPublishNews está usando a classe IniciarDriver como relação de herança para iniciar o construtor.
+        '''
         #valida a versão do Chrome, atualiza o driver ou instala caso não exista
         s=Service(ChromeDriverManager().install())
         #executa o serviço acima
@@ -33,14 +37,22 @@ class ExcecaoAnoInvalido(Exception):
 
 #a classe ExtracaoPublishNews está usando a classe IniciarDriver como relação de herança para iniciar o construtor.
 class ExtracaoPublishNews(IniciarDriver):
-    
+    '''
+    A classe ExtracaoPublishNews está usando a classe IniciarDriver como relação de herança para iniciar o construtor.
+    '''
     #aqui não temos o construtor pois estamos inicializando o driver na classe IniciarDriver
     def seleciona_anual(self):
-        sleep(2)
+        '''
+        Seleciona a aba ano no site.
+        '''
         #método para selecionar a aba de ano no site
         self.driver.find_element(by='xpath', value='//*[@id="pn-orelha-anual"]').click()
         
     def seleciona_xpath(self, ano): 
+        '''
+        Recebe como parâmetro o ano.
+        Disponíveis os anos entre 2010 e 2021.
+        ''' 
         sleep(2)
         #cria o dicionário com os anos para contorlar o xpath de cada ano
         self.listaDict = {}
@@ -62,6 +74,12 @@ class ExtracaoPublishNews(IniciarDriver):
     
     #método para coletar todas as informações disponíveis no site
     def coleta_dados(self):
+        '''
+        Método para extrair as informações de posição, título, autor, editora, categoria, isbn, número de páginas e volumes vendidos.
+        Cria o dataframe com as informações extraídas.
+        Retorna o dataframe criado.
+        É necessário passar como parâmetro o nome do dataframe.
+        '''
         #listas para guardar as informações do site, necessário para criar o dataframe
         self.posicao   = []
         self.titulo    = []
@@ -137,11 +155,17 @@ class ExtracaoPublishNews(IniciarDriver):
                       columns=['posicao', 'titulo', 'autor', 'editora', 'categoria', 'isbn', 'numero de paginas', 'volumes vendidos'])
 
         return self.dataframe
-    
-    #salva o dataframe em arquivo excel
+
     def salvar_dataframe(self, dataframe, nome_arquivo):
+        '''
+        Salva o dataframe em arquivo xlsx
+        Necessário passar como parâmetro o nome do arquivo.
+        '''
         self.dataframe.to_excel(nome_arquivo+'.xlsx')
-    
+        
     #fecha a janela após concluir a extração
     def fecha_browser(self):
+        '''
+        Fecha a janela após concluir a extração
+        '''
         self.driver.close()
