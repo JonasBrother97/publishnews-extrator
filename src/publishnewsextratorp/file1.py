@@ -176,3 +176,5 @@ class ExtracaoPublishNews(IniciarDriver):
         Fecha a janela após concluir a extração
         '''
         self.driver.close()
+
+        
