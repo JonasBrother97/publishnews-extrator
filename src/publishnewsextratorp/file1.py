@@ -39,6 +39,13 @@ class ExcecaoAnoInvalido(Exception):
 class ExtracaoPublishNews(IniciarDriver):
     '''
     A classe ExtracaoPublishNews está usando a classe IniciarDriver como relação de herança para iniciar o construtor.
+    
+    Métodos disponíveis:
+    seleciona_anual()
+    seleciona_xpath()
+    coleta_dados()
+    salvar_dataframe()
+    fecha_browser()
     '''
     #aqui não temos o construtor pois estamos inicializando o driver na classe IniciarDriver
     def seleciona_anual(self):
