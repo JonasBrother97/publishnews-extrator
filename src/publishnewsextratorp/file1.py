@@ -166,7 +166,7 @@ class ExtracaoPublishNews(IniciarDriver):
     def salvar_dataframe(self, dataframe, nome_arquivo):
         '''
         Salva o dataframe em arquivo xlsx
-        Necessário passar como parâmetro o nome do arquivo.
+        Necessário passar como parâmetro o dataframe e o nome do arquivo.
         '''
         self.dataframe.to_excel(nome_arquivo+'.xlsx')
         
@@ -179,4 +179,3 @@ class ExtracaoPublishNews(IniciarDriver):
 
 
 
-        
