@@ -63,6 +63,21 @@ An example package. Generated with cookiecutter-pylibrary.
 
 * Free software: BSD 2-Clause License
 
+Requirements
+============
+
+::
+
+    pip install selenium
+
+::
+
+    pip install webdriver_manager
+
+::
+
+    pip install pandas
+
 Installation
 ============
 
@@ -74,6 +89,13 @@ You can also install the in-development version with::
 
     pip install https://github.com/JonasBrother97/python-publishnewsextratorp/archive/master.zip
 
+
+Example
+============
+
+::
+
+    https://github.com/JonasBrother97/python-publishnewsextratorp/blob/master/src/publishnewsextratorp/relatorio.ipynb
 
 Documentation
 =============
